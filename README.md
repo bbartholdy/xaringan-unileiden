@@ -8,6 +8,8 @@ To download the slides, use:
 git clone git@github.com:bbartholdy/xaringan-unileiden.git
 ```
 
+or [download](https://github.com/bbartholdy/xaringan-unileiden/archive/refs/heads/main.zip) the repo.
+
 You will also need to install a couple of R packages:
 
 ```r
