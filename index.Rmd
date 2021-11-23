@@ -1,0 +1,90 @@
+---
+title: "Title of my Presentation"
+subtitle: "A subtitle explaining the pun"
+author: "A name or class or event or whatever"
+faculty: "Archaeology"
+date: "TBD (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    #chakra: libs/remark-latest.min.js
+    css: [assets/css/extra.css, assets/css/leiden.css, assets/css/leiden-fonts.css]
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: ""
+---
+class: middle, title-slide, inverse
+
+```{r setup, include=FALSE}
+faculty_cols <- data.frame(faculty = c("Social & Behavioural Sciences", "Science",
+                                       "Humanities", "Archaeology", 
+                                       "Governance and Global Affairs", "Medicine",
+                                       "Law"),
+                           colour = c("#be1908", "#f46e32", "#aaad00", "#2c712d",
+                                      "#34a3a9", "#5cb1eb", "#b02079"))
+
+m1 <- match(faculty_cols$faculty, rmarkdown::metadata$faculty)
+m1 <- !is.na(m1)
+accent_col <- faculty_cols$colour[m1]
+xaringanthemer::style_xaringan(text_bold_color = accent_col, 
+                               outfile = "assets/css/extra.css")
+colorize <- function(x, color) {
+    sprintf("<span style='color: %s;'>%s</span>", color, x)
+}
+```
+
+
+.title-left[
+# `r rmarkdown::metadata$title`
+
+### `r rmarkdown::metadata$subtitle`
+
+#### `r rmarkdown::metadata$author`
+]
+
+---
+layout: true
+<div class='footer'>
+<span>Discover the world or something like that...</span>
+<img src='assets/img/logo.png' width=82 />
+</div>
+---
+class: middle, left
+
+```{r echo=FALSE}
+xaringanExtra::use_progress_bar(color = accent_col)
+```
+
+## Xaringan x UniLeiden
+
+Xaringan is an R Markdown extension based on [remark.js](https://remarkjs.com)
+
+Find out more about Xaringan [here](https://bookdown.org/yihui/rmarkdown/xaringan.html).
+
+
+---
+class: middle, left
+
+## Huisstijl
+
+A custom css file (`assets/css/leiden.css`) is available to give it the Leiden
+University look, with colours and font.
+
+Indicate your faculty in the yaml header to get the appropriate **accent colour** (as defined by the [website](https://huisstijl.leidenuniv.nl/en/basic-elements/colours/)).
+
+This will change the colour of the progress bar and **bold** font.
+
+```yaml
+title: "Title of my Presentation"
+subtitle: "A subtitle explaining the pun"
+author: "A name or class or event or whatever"
+faculty: "Archaeology"
+```
+
+Choose from:
+
+`r colorize(faculty_cols$faculty, faculty_cols$colour)`

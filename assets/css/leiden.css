@@ -1,0 +1,158 @@
+/* Leiden blue: #001158
+Archaeology green: #2c712d */
+h1, h2, h3 {
+  color: #001158;
+}
+
+/*
+strong {
+  color: #2c712d;
+}
+*/
+a, a > code {
+  color: rgb(249, 38, 114);
+  text-decoration: none;
+}
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 90%;
+}
+.remark-code-line-highlighted     { background-color: #ffff88; }
+
+.inverse {
+  background-color: #001158;
+  color: #d6d6d6;
+  text-shadow: none !important;
+  /* Top-right logo on blue slides
+  background-image: url(./logo.png) !important;
+  background-position: 98% 2%;
+  background-size: 150px;*/
+}
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #f3f3f3;
+}
+
+.inverse tr:nth-child(odd) {
+  background: #fff !important;
+}
+
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right + * {
+  clear: both;
+}
+img, video, iframe {
+  max-width: 100%;
+}
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+.remark-inline-code {
+  color: rgb(249, 38, 114);
+}
+.remark-slide table {
+  margin: auto;
+}
+.remark-slide table thead th { 
+  background-color: #2c712d;
+  color: #fff;
+}
+th, td { 
+  padding: 5px; 
+  color: #212121;
+}
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { 
+  background: #eee 
+}
+
+/* Top-right logo on white slides
+.remark-slide-content {
+  background-image: url(./logo-blue.png);
+  background-position: 98% 2%;
+  background-size: 120px;
+}*/
+
+@page { margin: 0; }
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/* experimental footer */
+
+div.footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  background-color: #001158;
+}
+div.footer img {
+  position: absolute;
+  bottom: -8px;
+  right: 70px;
+}
+div.footer span {
+  font-size: 12pt;
+  color: white;
+  position: absolute;
+  left: 70px;
+  bottom: 4px;
+}
+
+.title-slide {
+  /*background-color: #001158;*/
+  background-image: url(../img/logo.png);
+  background-size: 36%;
+  background-position: 96% 50%;
+}
+
+.title-slide h1 h2 h3 {
+  color: #fff;
+}
+
+.title-left {
+  float: left;
+  width: 63%;
+  border-right: 3px solid white;
+  padding-right: 15px;
+}
+
+/* experimental white box (to mimic leiden-style pres) */
+.hl {
+  border-top: 250px solid white;
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+}
