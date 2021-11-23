@@ -2,6 +2,8 @@
 
 University of Leiden theme for xaringan slides
 
+![](assets/img/title-slide.png)
+
 To download the slides, use:
 
 ```sh
@@ -19,6 +21,10 @@ devtools::install_github("gadenbuie/xaringanExtra")
 
 Open the `index.Rmd` file in RStudio and Knit (Ctrl + Shift + K).
 You can make changes to the file to create your own slides.
+
+Customise with the faculty-specific accent colours:
+
+![](assets/img/huisstijl.png)
 
 For more information on making slides, see <https://bookdown.org/yihui/rmarkdown/xaringan-format.html> or the **xaringan** [GitHub repo](https://github.com/yihui/xaringan).
 

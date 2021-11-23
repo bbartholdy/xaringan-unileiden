@@ -49,7 +49,7 @@ colorize <- function(x, color) {
 ---
 layout: true
 <div class='footer'>
-<span>Discover the world or something like that...</span>
+<span>Discover the world at Leiden University</span>
 <img src='assets/img/logo.png' width=82 />
 </div>
 ---
